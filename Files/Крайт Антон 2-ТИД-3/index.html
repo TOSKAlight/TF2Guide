@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Fortress 2 | Гайд</title>
+    <!-- Подключение шрифтов Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">TF2 GUIDES</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#classes">Наемники</a></li>
+                <li><a href="#stats">Сводка</a></li>
+                <li><a href="#join">Контракт</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>TEAM FORTRESS 2</h1>
+            <p>Защищай чемодан, толкай вагонетку и не доверяй шпионам.</p>
+        </section>
+
+        <section id="classes" class="section">
+            <h2>Досье наемников</h2>
+            <div class="grid-container">
+                <div class="card card-red">
+                    <h3>Разведчик (Scout)</h3>
+                    <p>Самый <b>быстрый</b> класс. Идеален для захвата точек и раздражения противников.</p>
+                    <button class="btn-tf" onclick="showInfo('Разведчик')">Читать досье</button>
+                </div>
+                <div class="card card-blu">
+                    <h3>Пулеметчик (Heavy)</h3>
+                    <p>Танк команды. Обожает <span>свой пулемет</span> "Сашу" и бутерброды.</p>
+                    <button class="btn-tf" onclick="showInfo('Пулеметчик')">Читать досье</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section float-section">
+            <h2>Корпоративная война</h2>
+            <div class="float-box">
+                <span class="red-text">RED</span> vs <span class="blu-text">BLU</span>
+            </div>
+            <p class="lore-text">Две могущественные корпорации, Reliable Excavation Demolition и Builders League United, ведут бесконечную войну за контроль над бесполезными гравийными карьерами. Наемники сражаются за деньги, выполняя контракты таинственного Администратора.</p>
+            <div class="clear"></div>
+        </section>
+
+        <section id="stats" class="section">
+            <h2>Тактическая сводка</h2>
+            <ul class="custom-list">
+                <li>Атака (Нападение и захват)</li>
+                <li>Защита (Удержание позиций)</li>
+                <li>Поддержка (Медицина и диверсии)</li>
+            </ul>
+
+            <table class="tf2-table">
+                <thead>
+                    <tr>
+                        <th>Класс</th>
+                        <th>Здоровье</th>
+                        <th>Скорость</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Разведчик</td>
+                        <td>125</td>
+                        <td>133%</td>
+                    </tr>
+                    <tr>
+                        <td>Пулеметчик</td>
+                        <td>300</td>
+                        <td>77%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="join" class="section form-section">
+            <h2>Подписать контракт</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="nickname">Позывной:</label>
+                    <input type="text" id="nickname" placeholder="Например: Pootis">
+                </div>
+                <div class="form-group">
+                    <label for="role">Специализация:</label>
+                    <select id="role">
+                        <option value="attack">Атака</option>
+                        <option value="defense">Защита</option>
+                        <option value="support">Поддержка</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-tf btn-large">Отправить Администратору</button>
+            </form>
+            <p id="form-message" class="hidden"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Разработано для курсовой работы. 2026</p>
+    </footer>
+
+    <!-- Модальное окно (всплывающее досье) -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div class="modal-box">
+            <button class="close-btn" id="close-modal">✖</button>
+            <h2 id="modal-title">СЕКРЕТНО</h2>
+            <p id="modal-content">Здесь будет информация о классе.</p>
+            <img src="https://wiki.teamfortress.com/w/images/thumb/4/4c/Red_logo.png/200px-Red_logo.png" alt="RED Logo" class="modal-logo">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
